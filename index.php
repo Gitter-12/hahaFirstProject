@@ -21,8 +21,3 @@
 
 </html>
 
-
-cd "C:\wamp64\www\firstProject"
-git init
-git add .
-git commit -m "Initial commit"
