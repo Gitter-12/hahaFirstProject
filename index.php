@@ -6,19 +6,21 @@
     <title>Document</title>
 </head>
 <body>
+
 <form action = "add.php" method="post">
 
 
     <label>Task title: </label>
-    <input type="text" name="title">
-    <input type = "submit" value = "Create Task">
+    <input type="text" name="task_title">
+    <input type = "submit" value = "Create task">
 
 </form>
 
-here are a bunch of changes on my laptop
-<p>this is a testing paragraph</p>
+
+
+
 </body>
-hef
+
 
 </html>
 
