@@ -8,11 +8,11 @@
 
     try{
     $conn = mysqli_connect($db_server, $db_user, $db_pass, $db_name);
-        echo"connected!!!! <br>";
+        // echo"connected!!!! <br>";
 
     }
     catch(mysqli_sql_exception){
-        echo"couldnt connect... <br>";
+        // echo"couldnt connect... <br>";
     }
 
 
