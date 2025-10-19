@@ -60,6 +60,14 @@
 
     </table>
 
+        <form action="delete.php" method="post">
+
+
+        <label>Enter ID: </label>
+        <input type="text" name="delete_id">
+        <input type="submit" value="Delete">
+
+    </form>
 
 
 </body>
