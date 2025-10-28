@@ -14,12 +14,12 @@ if (!isset($_POST['delete_id']) || !ctype_digit($_POST['delete_id'])) {
 
 $delete_id = (int)$_POST['delete_id'];
 $sql = "DELETE FROM tasks WHERE id = (?)";
-
+$sql2 = "DELETE FROM tasks WHERE id IN $_POST['delete_ids']";
 try {
     $stmt = $conn->prepare($sql);
     $stmt->bind_param('i', $delete_id);
     $stmt->execute();
-
+    mysqli_query($conn, $sql2);
     // checks if index deleted, if not, ID doesnt exist
     if ($stmt->affected_rows === 0) {
         header('Location: index.php?error=not_found');
@@ -41,6 +41,6 @@ try {
         $stmt->close();
     }
     if (isset($conn) && $conn instanceof mysqli) {
-        $stmt->close();
+        $conn->close();
     }
 }

@@ -40,6 +40,6 @@ try {
         $stmt->close();
     }
     if (isset($conn) && $conn instanceof mysqli) {
-        $stmt->close();
+        $conn->close();
     }
 }

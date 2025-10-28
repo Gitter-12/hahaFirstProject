@@ -23,6 +23,7 @@
     </form>
 
     <br>
+        <form action="delete.php" method="post">
 
     <table class="table table-bordered">
         <thead>
@@ -42,10 +43,11 @@
             ?>
 
                     <tr>
-                        <td><?php echo $row['id']; ?></td>
+                        <td><input type = "checkbox" name = "delete_ids[]" value="<?php echo $row['id']; ?>">    <?php echo $row['id']; ?></td>
                         <td><?php echo $row['title']; ?></td>
                         <td><?php echo $row['status']; ?></td>
                         <td><?php echo $row['created_at']; ?></td>
+
                     </tr>
 
             <?php
@@ -60,7 +62,6 @@
 
     </table>
 
-        <form action="delete.php" method="post">
 
 
         <label>Enter ID: </label>
